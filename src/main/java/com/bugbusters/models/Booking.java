@@ -19,9 +19,15 @@ public class Booking {
     private ObjectId userId;
     private ObjectId pestId;
 
+    private String pricingType; //One-time / Monthly / Yearly
+    private String priceDetails; // Details about the price;
+    private String price;
+
     @CreatedDate
     private Instant createdTime;
     private Status status;
+
+    private Pests pests;
 
     public Booking(ObjectId userId, ObjectId pestId) {
         this.userId = userId;

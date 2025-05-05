@@ -20,9 +20,8 @@ public class BookingController {
     private BookingService bookingService;
 
     @PostMapping
-    public ResponseEntity<Booking> bookAnService(@RequestBody RequestBodyPOJO body){
-        Booking booked = new Booking(body.getUser_id() , body.getPest_id());
-        return new ResponseEntity<>(bookingService.bookAService(booked) , HttpStatus.ACCEPTED);
+    public ResponseEntity<Booking> bookAnService(@RequestBody Booking body){
+        return new ResponseEntity<>(bookingService.bookAService(body) , HttpStatus.ACCEPTED);
     }
 
     @GetMapping

@@ -42,8 +42,8 @@ public class PestsController {
         return pestsServices.getAll();
     }
 
-    @GetMapping("/id/{id}")
-    public Pests getById(@PathVariable ObjectId id){
+    @GetMapping("/id")
+    public Pests getById(@RequestParam ObjectId id){
         return pestsServices.getPestsById(id);
     }
 }

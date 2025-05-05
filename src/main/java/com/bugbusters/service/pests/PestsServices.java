@@ -21,7 +21,7 @@ public class PestsServices {
     }
 
     public Pests getPestsById(ObjectId id){
-        return savePestsMongoRepository.findById(id).orElse(null);
+        return savePestsMongoRepository.getPestsById(id);
     }
 
     public List<Pests> getAll(){
