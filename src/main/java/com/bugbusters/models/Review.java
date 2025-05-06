@@ -13,8 +13,8 @@ public class Review {
     @Id
     private ObjectId id;
 
+    private String userName;
     private String comment;
     @CreatedDate
     private Instant createdTime;
-    private ObjectId user_id;
 }
