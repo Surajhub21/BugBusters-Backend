@@ -42,10 +42,10 @@ public class PestsController {
         return pestsServices.getAll();
     }
 
-    @GetMapping("/id/{id}")
-    public Pests getById(@PathVariable ObjectId id){
-        return pestsServices.getPestsById(id);
-    }
+//    @GetMapping("/id/{id}")
+//    public Pests getById(@PathVariable ObjectId id){
+//        return pestsServices.getPestsById(id);
+//    }
 
     @GetMapping("/id/{pestName}")
     public Pests getByPestName(@PathVariable String pestName){
