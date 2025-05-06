@@ -27,4 +27,8 @@ public class PestsServices {
     public List<Pests> getAll(){
         return savePestsMongoRepository.findAll();
     }
+
+    public Pests getBYpestName(String pestName){
+        return savePestsMongoRepository.getPestByPestName(pestName);
+    }
 }

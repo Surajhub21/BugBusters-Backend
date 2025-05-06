@@ -7,4 +7,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 public interface SavePestsMongoRepository extends MongoRepository<Pests, ObjectId> {
 
     Pests getPestsById(ObjectId id);
+
+    Pests getPestByPestName(String pestName);
 }
