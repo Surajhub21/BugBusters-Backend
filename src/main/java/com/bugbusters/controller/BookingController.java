@@ -30,8 +30,8 @@ public class BookingController {
     }
 
     @GetMapping("/id/{userId}")
-    public List<Booking> getBookingsByUserId(@PathVariable ObjectId userId){
-        return bookingService.getBookingsByUserId(userId);
+    public List<Booking> getBookingsByUserId(@PathVariable String userId){
+        return bookingService.getBookingsByUserId(new ObjectId(userId));
     }
 
     @DeleteMapping("/id/{id}")
