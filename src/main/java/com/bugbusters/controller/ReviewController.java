@@ -27,8 +27,8 @@ public class ReviewController {
         }
     }
 
-    @GetMapping("/id/{id}")
-    public List<Review> getReviewOfAnUser(@PathVariable ObjectId id){
-        return reviewService.giveAllReviewOfAnUser(id);
+    @GetMapping
+    public List<Review> reviewList(){
+        return reviewService.listAllReviews();
     }
 }

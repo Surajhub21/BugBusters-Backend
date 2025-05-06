@@ -19,6 +19,10 @@ public class ReviewService {
         return reviewRepository.save(review);
     }
 
+    public List<Review> listAllReviews(){
+        return reviewRepository.findAll();
+    }
+
     public List<Review> giveAllReviewOfAnUser(ObjectId id){
         return reviewRepository.findAllById(Collections.singleton(id));
     }
